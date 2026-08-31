@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: int_container_metadata
+    description: "Intermediate container state joined with safe environmental baseline specs."
+    columns:
+      - name: container_id
+        tests:
+          - unique
+          - not_null
+
+  - name: int_spoilage_curve
+    description: "Calculated spoilage rate multiplier, remaining safe hours, and risk classification."
+    columns:
+      - name: container_id
+        tests:
+          - unique
+          - not_null
+      - name: risk_level
+        tests:
+          - accepted_values:
+              values: ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL']
+
+  - name: int_distance_to_market
+    description: "Haversine distance and transit time calculations to candidate Indian regional markets."
+    columns:
+      - name: container_id
+        tests:
+          - not_null
+      - name: target_market
+        tests:
+          - not_null

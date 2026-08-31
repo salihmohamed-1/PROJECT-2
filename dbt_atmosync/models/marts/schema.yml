@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: fct_spoilage_arbitrage
+    description: "Core Spoilage Arbitrage fact model linking container environmental status with candidate destination market prices and rerouting economics."
+    columns:
+      - name: container_id
+        tests:
+          - unique
+          - not_null
+      - name: risk_level
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['LOW', 'MEDIUM', 'HIGH', 'CRITICAL']
+      - name: recommended_market
+        tests:
+          - not_null
+      - name: arbitrage_opportunity_flag
+        tests:
+          - not_null
+
+  - name: dim_containers
+    description: "Dimension model detailing container physical specifications and safe ranges."
+    columns:
+      - name: container_id
+        tests:
+          - unique
+          - not_null
+
+  - name: dim_markets
+    description: "Dimension model detailing candidate target regional markets."
+    columns:
+      - name: market_name
+        tests:
+          - unique
+          - not_null

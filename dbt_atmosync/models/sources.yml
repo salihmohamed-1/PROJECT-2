@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw
+    database: "{{ env_var('SNOWFLAKE_DATABASE', 'ATMOSYNC') }}"
+    schema: RAW
+    tables:
+      - name: RAW_TELEMETRY
+        description: "Raw IoT micro-climate container streaming telemetry events."
+        columns:
+          - name: EVENT_ID
+            description: "Unique GUID for the telemetry event."
+            tests:
+              - unique
+              - not_null
+          - name: CONTAINER_ID
+            description: "Unique container identifier (e.g. CONT-001)."
+            tests:
+              - not_null
+
+      - name: COMMODITY_PRICING
+        description: "Spot market price reference table across Indian commodity hubs."
+
+      - name: CONTAINER_METADATA
+        description: "Container commodity assignment and baseline safe environmental thresholds."
+
+      - name: MARKET_LOCATIONS
+        description: "Geographic coordinates of candidate destination markets."
