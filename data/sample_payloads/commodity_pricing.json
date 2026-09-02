@@ -1,0 +1,149 @@
+[
+  {
+    "commodity": "Fresh Produce",
+    "market": "Chennai",
+    "price_per_unit_inr": 48.50,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Fresh Produce",
+    "market": "Bangalore",
+    "price_per_unit_inr": 54.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Fresh Produce",
+    "market": "Hyderabad",
+    "price_per_unit_inr": 52.20,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Fresh Produce",
+    "market": "Mumbai",
+    "price_per_unit_inr": 62.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Fresh Produce",
+    "market": "Delhi",
+    "price_per_unit_inr": 65.50,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Fresh Produce",
+    "market": "Kolkata",
+    "price_per_unit_inr": 58.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Dairy",
+    "market": "Chennai",
+    "price_per_unit_inr": 68.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Dairy",
+    "market": "Bangalore",
+    "price_per_unit_inr": 72.50,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Dairy",
+    "market": "Hyderabad",
+    "price_per_unit_inr": 70.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Dairy",
+    "market": "Mumbai",
+    "price_per_unit_inr": 85.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Dairy",
+    "market": "Delhi",
+    "price_per_unit_inr": 82.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Dairy",
+    "market": "Kolkata",
+    "price_per_unit_inr": 76.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Frozen Food",
+    "market": "Chennai",
+    "price_per_unit_inr": 120.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Frozen Food",
+    "market": "Bangalore",
+    "price_per_unit_inr": 135.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Frozen Food",
+    "market": "Mumbai",
+    "price_per_unit_inr": 150.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Frozen Food",
+    "market": "Delhi",
+    "price_per_unit_inr": 145.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Seafood",
+    "market": "Chennai",
+    "price_per_unit_inr": 280.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Seafood",
+    "market": "Bangalore",
+    "price_per_unit_inr": 340.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Seafood",
+    "market": "Hyderabad",
+    "price_per_unit_inr": 310.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Pharmaceuticals",
+    "market": "Bangalore",
+    "price_per_unit_inr": 850.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  },
+  {
+    "commodity": "Pharmaceuticals",
+    "market": "Mumbai",
+    "price_per_unit_inr": 920.00,
+    "currency": "INR",
+    "timestamp": "2026-08-12T10:00:00Z"
+  }
+]

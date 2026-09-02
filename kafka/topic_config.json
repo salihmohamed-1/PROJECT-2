@@ -1,0 +1,11 @@
+{
+  "topic": "container_telemetry",
+  "num_partitions": 3,
+  "replication_factor": 1,
+  "configs": {
+    "cleanup.policy": "delete",
+    "retention.ms": "604800000",
+    "segment.bytes": "1073741824",
+    "min.insync.replicas": "1"
+  }
+}
