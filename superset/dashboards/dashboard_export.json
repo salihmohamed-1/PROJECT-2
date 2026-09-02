@@ -1,0 +1,35 @@
+{
+  "dashboard_title": "AtmoSync – Live Spoilage Arbitrage Dashboard",
+  "description": "Real-time monitoring of micro-climate sensor drift inside refrigerated shipping containers, calculated spoilage risk, and actionable rerouting arbitrage metrics.",
+  "kpis": [
+    {"name": "Total Active Containers", "metric": "COUNT(DISTINCT container_id)", "format": ",d"},
+    {"name": "At-Risk Containers", "metric": "COUNT(CASE WHEN risk_level IN ('HIGH', 'CRITICAL') THEN 1 END)", "format": ",d"},
+    {"name": "Critical Containers", "metric": "COUNT(CASE WHEN risk_level = 'CRITICAL' THEN 1 END)", "format": ",d"},
+    {"name": "Active Arbitrage Opportunities", "metric": "COUNT(CASE WHEN arbitrage_opportunity_flag = TRUE THEN 1 END)", "format": ",d"},
+    {"name": "Avg Container Temperature", "metric": "AVG(current_temperature)", "format": ".1f °C"},
+    {"name": "Avg Container Humidity", "metric": "AVG(current_humidity)", "format": ".1f %"},
+    {"name": "Avg Time to Spoilage", "metric": "AVG(estimated_time_to_spoilage_hours)", "format": ".1f hrs"},
+    {"name": "Total Potential Arbitrage Profit", "metric": "SUM(CASE WHEN arbitrage_opportunity_flag = TRUE THEN net_arbitrage_profit_inr ELSE 0 END)", "format": "₹,d"}
+  ],
+  "charts": [
+    {"id": 1, "title": "Temperature by Container", "type": "bar", "x_axis": "container_id", "y_axis": "current_temperature"},
+    {"id": 2, "title": "Humidity by Container", "type": "bar", "x_axis": "container_id", "y_axis": "current_humidity"},
+    {"id": 3, "title": "Vibration Shock Events by Container", "type": "bar", "x_axis": "container_id", "y_axis": "current_vibration"},
+    {"id": 4, "title": "Container Risk Level Distribution", "type": "pie", "group_by": "risk_level"},
+    {"id": 5, "title": "Spoilage Risk Over Time", "type": "line", "x_axis": "last_event_timestamp", "y_axis": "spoilage_probability", "group_by": "container_id"},
+    {"id": 6, "title": "Time-to-Spoilage by Container", "type": "horizontal_bar", "x_axis": "container_id", "y_axis": "estimated_time_to_spoilage_hours"},
+    {"id": 7, "title": "Active Arbitrage Opportunities & Net Profit", "type": "table", "columns": ["container_id", "commodity", "risk_level", "recommended_market", "net_arbitrage_profit_inr", "action_recommendation"]},
+    {"id": 8, "title": "Destination Market Price Premium Comparison", "type": "grouped_bar", "x_axis": "recommended_market", "y_axis": "net_arbitrage_profit_inr", "group_by": "commodity"},
+    {"id": 9, "title": "Recommended Reroute Destination Frequency", "type": "pie", "group_by": "recommended_market"},
+    {"id": 10, "title": "Arbitrage Value vs Reroute Cost by Container", "type": "scatter", "x_axis": "reroute_cost_inr", "y_axis": "net_arbitrage_profit_inr", "group_by": "container_id"}
+  ],
+  "filters": [
+    "container_id",
+    "commodity",
+    "origin",
+    "original_destination",
+    "risk_level",
+    "recommended_market",
+    "last_event_timestamp"
+  ]
+}

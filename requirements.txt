@@ -1,0 +1,12 @@
+# AtmoSync Python Dependencies
+kafka-python==2.0.2
+snowflake-connector-python==3.7.1
+dbt-core==1.7.9
+dbt-snowflake==1.7.3
+pandas==2.2.1
+numpy==1.26.4
+pyyaml==6.0.1
+python-dotenv==1.0.1
+requests==2.31.0
+pytest==8.0.2
+tabulate==0.9.0

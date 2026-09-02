@@ -1,0 +1,18 @@
+{
+  "alerts": [
+    {
+      "name": "AtmoSync Critical Spoilage Risk Alert",
+      "sql": "SELECT COUNT(*) FROM ANALYTICS.FCT_SPOILAGE_ARBITRAGE WHERE RISK_LEVEL = 'CRITICAL'",
+      "validator": "operator > 0",
+      "frequency": "CRON: */5 * * * *",
+      "recipients": ["slack_webhook", "email_smtp"]
+    },
+    {
+      "name": "High Arbitrage Reroute Opportunity Alert",
+      "sql": "SELECT COUNT(*) FROM ANALYTICS.FCT_SPOILAGE_ARBITRAGE WHERE ARBITRAGE_OPPORTUNITY_FLAG = TRUE AND NET_ARBITRAGE_PROFIT_INR > 35000",
+      "validator": "operator > 0",
+      "frequency": "CRON: */5 * * * *",
+      "recipients": ["slack_webhook"]
+    }
+  ]
+}

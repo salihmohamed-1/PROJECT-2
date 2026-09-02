@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  superset:
+    image: apache/superset:3.1.0
+    container_name: atmosync-superset
+    ports:
+      - "8088:8088"
+    environment:
+      SUPERSET_SECRET_KEY: 'atmosync_production_secret_key_change_me'
+      TALISMAN_ENABLED: "False"
+    command: >
+      bash -c "
+      superset fab create-admin --username admin --firstname Admin --lastname User --email admin@atmosync.io --password admin &&
+      superset db upgrade &&
+      superset init &&
+      run-server
+      "
