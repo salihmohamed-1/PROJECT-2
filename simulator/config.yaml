@@ -1,0 +1,83 @@
+containers:
+  count: 20
+  ids:
+    - CONT-001
+    - CONT-002
+    - CONT-003
+    - CONT-004
+    - CONT-005
+    - CONT-006
+    - CONT-007
+    - CONT-008
+    - CONT-009
+    - CONT-010
+    - CONT-011
+    - CONT-012
+    - CONT-013
+    - CONT-014
+    - CONT-015
+    - CONT-016
+    - CONT-017
+    - CONT-018
+    - CONT-019
+    - CONT-020
+
+telemetry:
+  interval_seconds: 2
+  vibration_base: 0.15
+  vibration_spike_chance: 0.10
+
+commodities:
+  - name: Fresh Produce
+    temperature_min: 2.0
+    temperature_max: 8.0
+    humidity_min: 80.0
+    humidity_max: 95.0
+    spoilage_hours: 48.0
+    base_cargo_value_inr: 500000.0
+
+  - name: Dairy
+    temperature_min: 0.0
+    temperature_max: 4.0
+    humidity_min: 65.0
+    humidity_max: 75.0
+    spoilage_hours: 24.0
+    base_cargo_value_inr: 750000.0
+
+  - name: Frozen Food
+    temperature_min: -20.0
+    temperature_max: -12.0
+    humidity_min: 40.0
+    humidity_max: 60.0
+    spoilage_hours: 96.0
+    base_cargo_value_inr: 1200000.0
+
+  - name: Seafood
+    temperature_min: -2.0
+    temperature_max: 2.0
+    humidity_min: 85.0
+    humidity_max: 98.0
+    spoilage_hours: 36.0
+    base_cargo_value_inr: 1500000.0
+
+  - name: Pharmaceuticals
+    temperature_min: 2.0
+    temperature_max: 8.0
+    humidity_min: 30.0
+    humidity_max: 50.0
+    spoilage_hours: 72.0
+    base_cargo_value_inr: 2500000.0
+
+routes:
+  - origin: Chennai
+    destination: Mumbai
+    start_coords: [13.0827, 80.2707]
+    end_coords: [19.0760, 72.8777]
+  - origin: Bangalore
+    destination: Delhi
+    start_coords: [12.9716, 77.5946]
+    end_coords: [28.7041, 77.1025]
+  - origin: Hyderabad
+    destination: Kolkata
+    start_coords: [17.3850, 78.4867]
+    end_coords: [22.5726, 88.3639]
